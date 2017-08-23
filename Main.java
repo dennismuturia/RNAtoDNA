@@ -10,9 +10,15 @@ public class Main {
         //Initialize the scanner object. Scanner is used in the inputs
         Scanner myScanner = new Scanner(System.in);
 
-        //Input something
-        String myName = myScanner.next();
+        System.out.println("Enter name:");
+        String myDNA = myScanner.next();
 
-        System.out.println("Your name is" + myName);
+        //Create an array to hold The split strings as Split the String to separate chars
+        String[] splitStrings = myDNA.split("");
+
+        //Checking if it has split and displaying
+        for(int i=0; i < splitStrings.length; i++){
+            System.out.print(splitStrings[i]);
+        }
     }
 }
