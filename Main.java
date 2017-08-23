@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;//This package is where the user will be used to input
+import java.util.StringJoiner;
 
 public class Main {
 
@@ -18,11 +19,16 @@ public class Main {
 
         //This will loop as it replaces the old Strings with new Value Strings I mean chars haha
         for(int i=0; i < splitStrings.length; i++){
+
             splitStrings[i].replace("G","C");
             splitStrings[i].replace("C","G");
             splitStrings[i].replace("T","A");
             splitStrings[i].replace("A","U");
         }
+        //This Method joins back the split Strings back
+        StringJoiner myString = new StringJoiner("");
+        for(String s:splitStrings)myString.add(s);
+            System.out.println(myString);
 
     }
 }
