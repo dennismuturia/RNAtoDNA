@@ -19,15 +19,23 @@ public class Main {
 
         //This will loop as it replaces the old Strings with new Value Strings I mean chars haha
         for(int i=0; i < splitStrings.length; i++){
+            //Now this will Reassign values
+            if ((splitStrings[i]).equals("G")){
+                splitStrings[i] = "C";
+            }else if((splitStrings[i]).equals("C")){
+                splitStrings[i] = "G";
+            }else if((splitStrings[i]).equals("T")){
+                splitStrings[i] = "A";
+            }else if((splitStrings[i]).equals("A")){
+                splitStrings[i] = "U";
+            }
 
-            splitStrings[i].replace("G","C");
-            splitStrings[i].replace("C","G");
-            splitStrings[i].replace("T","A");
-            splitStrings[i].replace("A","U");
         }
         //This Method joins back the split Strings back
         StringJoiner myString = new StringJoiner("");
-        for(String s:splitStrings)myString.add(s);
+        for(String s:splitStrings) {
+            myString.add(s);
+        }
             System.out.println(myString);
 
     }
