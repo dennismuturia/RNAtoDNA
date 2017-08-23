@@ -16,9 +16,13 @@ public class Main {
         //Create an array to hold The split strings as Split the String to separate chars
         String[] splitStrings = myDNA.split("");
 
-        //Checking if it has split and displaying
+        //This will loop as it replaces the old Strings with new Value Strings I mean chars haha
         for(int i=0; i < splitStrings.length; i++){
-            System.out.println(splitStrings[i]);
+            splitStrings[i].replace("G","C");
+            splitStrings[i].replace("C","G");
+            splitStrings[i].replace("T","A");
+            splitStrings[i].replace("A","U");
         }
+
     }
 }
